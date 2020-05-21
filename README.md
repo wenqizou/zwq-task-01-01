@@ -35,7 +35,9 @@ EventLoop 主要就是循环监听（）调用栈和队列里面有没有程序�
 微任务则是指在这个宏任务执行的过程中，产生的新的一个小任务，这就不用再去消息队列排队，可以立即执行。
 
 
-9、new Promise(resolve => {
+9、
+```javascript
+new Promise(resolve => {
     console.log(1)
     setTimeout(() => {
         console.log('队列1')
@@ -55,7 +57,7 @@ EventLoop 主要就是循环监听（）调用栈和队列里面有没有程序�
         console.log(res + 'I love u')
     }, 10)
 })
-
+```
 10、Typescript 其实就是JavaScript的一个扩展，优化js 一些语法和强类型的校验
 
 但是ts编译后就是js.毕竟在浏览器中能执行的就是js代码，ts只是在开发阶段给我们提供了很多便捷以及校验处理
